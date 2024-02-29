@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}{{pet.name}}{% endblock %}
+{% block content %}
+<img class="pet-image" src="{{pet.photo_url}}">
+<div class="info-block">
+    <div class="pet-info name">
+        <p><b>Name:</b> {{pet.name}}</p>
+    </div>
+    <div class="pet-info species">
+        <p><b>Species:</b> {{pet.species}}</p>
+    </div>
+    <div class="pet-info age">
+        <p><b>Age:</b> {{pet.age}}</p>
+    </div>
+    <div class="pet-info available">
+        <p><b>Available:</b> {{pet.available}}</p>
+    </div>
+    <div class="pet-info notes">
+        <p><b>Notes:</b> {{pet.notes}}</p>
+    </div>
+    <!-- If pet is available create a failure css style for the adopt button -->
+    {% if pet.available %} 
+        <button class="pet-info button success">Adopt</button>
+        <button class="pet-info button success">Request Contact Info</button>
+    {% else %}
+        <button class="pet-info button failure">Adopt</button>
+        <button class="pet-info button failure">Request Contact Info</button>
+    {% endif %}
+
+    <form action="/pets/{{pet.id}}/edit">
+        <button class="pet-info button success">Edit Pet Information</button>
+    </form>
+
+</div>
+{% endblock %}

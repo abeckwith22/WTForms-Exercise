@@ -1,0 +1,65 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.navbar{
+    background-color: black;
+    overflow: hidden;
+}
+
+.navbar a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    font-weight: bold;
+}
+
+.pet-image{
+    /* width: 240px; */
+    border-radius: 10px;
+    max-height: 240px;
+}
+
+.info-block {
+    border-radius: 5px;
+    background-color: rgb(100, 100, 255);
+}
+
+.info-block .pet-info {
+    margin: 5px 10px;
+}
+
+.buttons button{
+    display: inline;
+}
+
+.button {
+    color: white;
+    border-radius: 3px;
+    border: none;
+    width: 12em;
+    height: 3em;
+}
+
+.button:hover{
+    font-weight: bold;
+}
+
+.success{
+    background-color: rgb(50, 150, 50);
+}
+
+.failure{
+    background-color: rgb(150, 50, 50);
+}
+
+#content{
+    margin: 40px;
+}

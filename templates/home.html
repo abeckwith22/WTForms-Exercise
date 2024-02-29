@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>This is the homepage!</h1>
+<ul>
+    {% for pet in pets %}
+    <div class="pet_div">
+        <li>ID: {{pet.id}} | Name: {{pet.name}} | Species: {{pet.species}} | Available: {{pet.available}} | <a href="/pets/{{pet.id}}">View More Info</a></li>
+        <div class="image">
+            <img class="pet-image" src="{{pet.photo_url}}">
+        </div>
+    </div>
+    {% endfor %}
+</ul>
+{% endblock %}
